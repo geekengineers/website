@@ -11,7 +11,7 @@ export default function Home() {
       <OngoingProjects />
 
       {/* Purpose Section */}
-      <section className="py-20 px-6 bg-gray-800/50">
+      <section className="pt-10 pb-20 px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">Why Choose GeekEngineers?</h2>

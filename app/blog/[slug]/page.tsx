@@ -5,6 +5,7 @@ import { getBlogPost, getBlogPosts } from "@/lib/blog-data"
 import ReactMarkdown from "react-markdown"
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter"
 import { oneDark } from "react-syntax-highlighter/dist/esm/styles/prism"
+import Navigation from "@/components/navigation"
 
 interface BlogPostPageProps {
   params: {
@@ -25,8 +26,10 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
   const nextPost = currentIndex > 0 ? allPosts[currentIndex - 1] : null
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900">
-      <div className="pt-24 pb-16">
+    <div className="min-h-screen">
+      <Navigation/>
+
+      <div className="pt-32 pb-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Back Link */}
           <Link

@@ -2,7 +2,7 @@ import Link from "next/link"
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center px-6 py-20 overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center px-6 pb-20 lg:pt-20 pt-32 overflow-hidden">
       {/* Subtle Background Elements */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-20 left-10 w-32 h-32 border border-red-400/30 rounded-lg animate-pulse" />
@@ -75,19 +75,6 @@ export default function Hero() {
                 alt="Modern programming workspace"
                 className="w-full h-auto rounded-lg shadow-lg"
               />
-
-              {/* Floating Code Elements */}
-              <div className="absolute -top-4 -right-4 backdrop-blur-sm bg-red-500/20 rounded-lg p-3 border border-red-500/30">
-                <div className="font-mono text-red-400 text-sm">
-                  <div>{"{ code: 'extreme' }"}</div>
-                </div>
-              </div>
-
-              <div className="absolute -bottom-4 -left-4 backdrop-blur-sm bg-white/10 rounded-lg p-3 border border-white/20">
-                <div className="font-mono text-gray-300 text-sm">
-                  <div>{"// level up"}</div>
-                </div>
-              </div>
             </div>
           </div>
         </div>

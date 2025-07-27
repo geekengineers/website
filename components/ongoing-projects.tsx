@@ -49,7 +49,7 @@ export default function OngoingProjects() {
   ]
 
   return (
-    <section className="py-20 px-6 bg-gray-900">
+    <section className="pt-10 pb-20 px-6">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16">
