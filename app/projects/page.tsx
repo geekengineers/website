@@ -37,10 +37,10 @@ export default function Projects() {
   ]
 
   return (
-    <div className="min-h-screen bg-gray-900 text-white">
+    <div className="min-h-screen text-white">
       <Navigation />
 
-      <main className="pt-24 pb-16 px-6">
+      <main className="pt-32 pb-16 px-6">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
           <div className="text-center mb-16">
@@ -122,8 +122,9 @@ export default function Projects() {
             </div>
           </div>
         </div>
-        <Footer />
       </main>
+
+      <Footer />
     </div>
   )
 }

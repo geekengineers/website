@@ -52,7 +52,7 @@ export default function Learn() {
   ]
 
   return (
-    <div className="min-h-screen bg-gray-900 text-white">
+    <div className="min-h-screen text-white">
       <Navigation />
 
       <main className="pt-24 pb-16 px-6">
@@ -165,6 +165,7 @@ export default function Learn() {
           </div>
         </div>
       </main>
+      
       <Footer />
     </div>
   )

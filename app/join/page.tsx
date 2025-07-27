@@ -30,11 +30,11 @@ export default function Join() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-900 text-white">
+    <div className="min-h-screen text-white">
       <Navigation />
 
-      <main className="pt-24 pb-16 px-6">
-        <div className="max-w-4xl mx-auto">
+      <main className="pt-32 pb-16 px-6">
+        <div className="max-w-5xl mx-auto">
           {/* Header */}
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">Join GeekEngineers</h1>
@@ -264,6 +264,7 @@ export default function Join() {
           </div>
         </div>
       </main>
+
       <Footer />
     </div>
   )

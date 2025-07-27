@@ -6,8 +6,8 @@ export default function BlogPage() {
   const posts = getBlogPosts()
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900">
-      <div className="pt-24 pb-16">
+    <div className="min-h-screen">
+      <div className="pt-32 pb-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Header */}
           <div className="text-center mb-16">

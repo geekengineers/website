@@ -3,10 +3,10 @@ import Footer from "@/components/footer"
 
 export default function About() {
   return (
-    <div className="min-h-screen bg-gray-900 text-white">
+    <div className="min-h-screen text-white">
       <Navigation />
 
-      <main className="pt-24 pb-16 px-6">
+      <main className="pt-32 pb-16 px-6">
         <div className="max-w-6xl mx-auto">
           {/* Title Section */}
           <div className="text-center mb-20">
