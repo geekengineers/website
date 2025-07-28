@@ -1,5 +1,7 @@
 import Link from "next/link"
 import { Button } from "./ui/button"
+import Image from "next/image"
+import heroImage from "@/assets/hero-image.png"
 
 export default function Hero() {
   return (
@@ -26,7 +28,7 @@ export default function Hero() {
             </h1>
 
             <div className="mb-8">
-              <p className="text-xl md:text-2xl text-primary/35 font-medium mb-6 leading-relaxed">
+              <p className="text-xl md:text-2xl text-primary/80 font-medium mb-6 leading-relaxed">
                 "Extremist software engineering guidance for Geeks."
               </p>
               <p className="text-lg md:text-xl text-gray-300 leading-relaxed max-w-2xl mx-auto lg:mx-0">
@@ -49,15 +51,15 @@ export default function Hero() {
             {/* Stats */}
             <div className="grid grid-cols-3 gap-6 pt-8 border-t border-white/10 max-w-md mx-auto lg:mx-0">
               <div className="text-center lg:text-left">
-                <div className="text-2xl font-bold text-primary/35">2+</div>
+                <div className="text-2xl font-bold text-primary/80">2+</div>
                 <div className="text-sm text-gray-400">Years Active</div>
               </div>
               <div className="text-center lg:text-left">
-                <div className="text-2xl font-bold text-primary/35">OSS</div>
+                <div className="text-2xl font-bold text-primary/80">OSS</div>
                 <div className="text-sm text-gray-400">Focused</div>
               </div>
               <div className="text-center lg:text-left">
-                <div className="text-2xl font-bold text-primary/35">∞</div>
+                <div className="text-2xl font-bold text-primary/80">∞</div>
                 <div className="text-sm text-gray-400">Learning</div>
               </div>
             </div>
@@ -66,10 +68,10 @@ export default function Hero() {
           {/* Right Column - Image */}
           <div className="relative">
             <div className="relative backdrop-blur-sm bg-white/5 rounded-2xl p-8 border border-white/10 shadow-2xl">
-              <img
-                src="/placeholder.svg?height=500&width=600"
-                alt="Modern programming workspace"
+              <Image
                 className="w-full h-auto rounded-lg shadow-lg"
+                src={heroImage}
+                alt="Yet Another Geek Programmer"
               />
             </div>
           </div>

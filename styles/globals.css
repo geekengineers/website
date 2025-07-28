@@ -52,7 +52,7 @@
     --card-foreground: 0 0% 98%;
     --popover: 0 0% 3.9%;
     --popover-foreground: 0 0% 98%;
-    --primary: 255, 92%, 59%;
+    --primary: 255 92% 59%;
     --primary-foreground: 0 0% 100%;
     --secondary: 0 0% 14.9%;
     --secondary-foreground: 0 0% 98%;
@@ -88,6 +88,11 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+@font-face {
+  font-family: KabisatDemo;
+  src: url("/fonts/Kabisat-Demo.ttf");
 }
 
 * {

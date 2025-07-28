@@ -7,7 +7,7 @@ export default function Logo() {
                 href="/"
                 className="flex items-center space-x-2 text-white"
             >
-                <span className="font-bold text-xl">Geek Engineers</span>
+                <span className="font-kabisat font-bold text-[17px]">Geek Engineers</span>
             </Link>
         </>
     );

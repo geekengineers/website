@@ -23,8 +23,8 @@ export default function Navigation() {
     <nav className="relative z-50 flex justify-center pt-4">
       <div
         className={`w-[95%] lg:w-[95%] xl:w-[75%] z-51 transition-[backdrop-filter] duration-300 ${scrolled
-            ? "fixed top-4 bg-black/20 backdrop-blur-md border border-white/10 rounded-2xl shadow-lg"
-            : "absolute bg-transparent backdrop-blur-0 border-transparent shadow-none"
+          ? "fixed top-4 bg-black/20 backdrop-blur-md border border-white/10 rounded-2xl shadow-lg"
+          : "absolute bg-transparent backdrop-blur-0 border-transparent shadow-none"
           }`}
       >
         <div className="mx-auto sm:px-6 lg:px-8 px-8">
@@ -33,11 +33,11 @@ export default function Navigation() {
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-8">
-              <Link href="/" className="text-white hover:text-red-400 transition-colors">Home</Link>
-              <Link href="/about" className="text-white hover:text-red-400 transition-colors">About</Link>
-              <Link href="/projects" className="text-white hover:text-red-400 transition-colors">Projects</Link>
-              <Link href="/blog" className="text-white hover:text-red-400 transition-colors">Blog</Link>
-              <Link href="/learn" className="text-white hover:text-red-400 transition-colors">Learn</Link>
+              <Link href="/" className="text-white hover:text-primary transition-colors">Home</Link>
+              <Link href="/about" className="text-white hover:text-primary transition-colors">About</Link>
+              <Link href="/projects" className="text-white hover:text-primary transition-colors">Projects</Link>
+              <Link href="/blog" className="text-white hover:text-primary transition-colors">Blog</Link>
+              <Link href="/learn" className="text-white hover:text-primary transition-colors">Learn</Link>
               <Link
                 href="/join"
               >
@@ -48,13 +48,14 @@ export default function Navigation() {
             {/* Mobile menu button */}
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="md:hidden text-white hover:text-red-400 transition-colors"
+              className="md:hidden text-white transition-colors"
             >
-              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              {isOpen ? <X className="h-8 w-8" /> : <Menu className="h-8 w-8" />}
             </button>
           </div>
         </div>
 
+        {/* FIXME */}
         {/* Mobile Navigation */}
         {isOpen && (
           <div className="md:hidden bg-black/40 backdrop-blur-md border-t border-white/10 rounded-b-2xl">
