@@ -21,7 +21,7 @@ export default function Navigation() {
   return (
     <nav className="relative z-50 flex justify-center pt-4">
      <div
-        className={`w-[95%] lg:w-[95%] xl:w-[75%] z-51 transition-colors transition-[backdrop-filter] duration-300 ${
+        className={`w-[95%] lg:w-[95%] xl:w-[75%] z-51 transition-[backdrop-filter] duration-300 ${
           scrolled
             ? "fixed top-4 bg-black/20 backdrop-blur-md border border-white/10 rounded-2xl shadow-lg"
             : "absolute bg-transparent backdrop-blur-0 border-transparent shadow-none"

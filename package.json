@@ -68,7 +68,9 @@
     "@types/node": "^22",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "@types/react-syntax-highlighter": "^15.5.13",
     "postcss": "^8.5",
+    "prism": "link:react-syntax-highlighter/dist/esm/styles/prism",
     "tailwindcss": "^3.4.17",
     "typescript": "^5"
   }

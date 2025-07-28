@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic"
+
 import { notFound } from "next/navigation"
 import Link from "next/link"
 import { Calendar, Clock, User, ArrowLeft, Share2, Github, Send } from "lucide-react"
@@ -6,6 +8,7 @@ import ReactMarkdown from "react-markdown"
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter"
 import { oneDark } from "react-syntax-highlighter/dist/esm/styles/prism"
 import Navigation from "@/components/navigation"
+import Footer from "@/components/footer"
 
 interface BlogPostPageProps {
   params: {
@@ -13,14 +16,14 @@ interface BlogPostPageProps {
   }
 }
 
-export default function BlogPostPage({ params }: BlogPostPageProps) {
-  const post = getBlogPost(params.slug)
+export default async function BlogPostPage({ params }: BlogPostPageProps) {
+  const post = await getBlogPost(params.slug)
 
   if (!post) {
     notFound()
   }
 
-  const allPosts = getBlogPosts()
+  const allPosts = await getBlogPosts()
   const currentIndex = allPosts.findIndex((p) => p.slug === params.slug)
   const previousPost = currentIndex < allPosts.length - 1 ? allPosts[currentIndex + 1] : null
   const nextPost = currentIndex > 0 ? allPosts[currentIndex - 1] : null
@@ -190,6 +193,8 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
           )}
         </div>
       </div>
+
+      <Footer />
     </div>
   )
 }

@@ -2,6 +2,7 @@ import Link from "next/link"
 import { Calendar, Clock, User, ArrowRight } from "lucide-react"
 import { getBlogPosts } from "@/lib/blog-data"
 import Navigation from "@/components/navigation"
+import Footer from "@/components/footer"
 
 export default function BlogPage() {
   const posts = getBlogPosts()
@@ -95,6 +96,8 @@ export default function BlogPage() {
           )}
         </div>
       </div>
+
+      <Footer />
     </div>
   )
 }
