@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react"
 import Link from "next/link"
 import { Menu, X, Code2 } from "lucide-react"
+import Logo from "./logo"
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
@@ -10,7 +11,7 @@ export default function Navigation() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 10)
+      setScrolled(window.scrollY > 50)
     }
 
     window.addEventListener("scroll", handleScroll)
@@ -18,24 +19,17 @@ export default function Navigation() {
   }, [])
 
   return (
-    <nav className="fixed top-4 left-0 right-0 z-50 flex justify-center">
+    <nav className="relative z-50 flex justify-center pt-4">
      <div
-        className={`w-[95%] md:w-[75%] transition-colors transition-[backdrop-filter] duration-300 ${
+        className={`w-[95%] lg:w-[95%] xl:w-[75%] z-51 transition-colors transition-[backdrop-filter] duration-300 ${
           scrolled
-            ? "bg-black/20 backdrop-blur-md border border-white/10 rounded-2xl shadow-lg"
-            : "bg-transparent backdrop-blur-0 border-transparent shadow-none"
+            ? "fixed top-4 bg-black/20 backdrop-blur-md border border-white/10 rounded-2xl shadow-lg"
+            : "absolute bg-transparent backdrop-blur-0 border-transparent shadow-none"
         }`}
       >
-        <div className="mx-auto lg:py-4 py-1 sm:px-6 lg:px-8 px-8">
-          <div className="flex justify-between items-center h-[69px]">
-            {/* Logo */}
-            <Link
-              href="/"
-              className="flex items-center space-x-2 text-white hover:text-red-400 transition-colors"
-            >
-              <Code2 className="h-8 w-8" />
-              <span className="font-bold text-xl">GeekEngineers</span>
-            </Link>
+        <div className="mx-auto sm:px-6 lg:px-8 px-8">
+          <div className="flex justify-between items-center h-[65px]">
+            <Logo />
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-8">

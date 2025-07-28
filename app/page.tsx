@@ -22,9 +22,9 @@ export default function Home() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="backdrop-blur-sm bg-white/5 rounded-lg p-8 border border-white/10 hover:border-red-500/30 transition-all duration-300 group">
-              <div className="w-12 h-12 bg-red-500/20 rounded-lg flex items-center justify-center mb-6 group-hover:bg-red-500/30 transition-colors">
-                <svg className="w-6 h-6 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="backdrop-blur-sm bg-white/5 rounded-lg p-8 border border-white/10 hover:border-primary/30 transition-all duration-300 group">
+              <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary/30 transition-colors">
+                <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path
                     strokeLinecap="round"
                     strokeLinejoin="round"
@@ -33,7 +33,7 @@ export default function Home() {
                   />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold mb-4 text-white group-hover:text-red-400 transition-colors">
+              <h3 className="text-xl font-semibold mb-4 text-white transition-colors">
                 Learn & Teach
               </h3>
               <p className="text-gray-300 leading-relaxed">
@@ -42,9 +42,9 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="backdrop-blur-sm bg-white/5 rounded-lg p-8 border border-white/10 hover:border-red-500/30 transition-all duration-300 group">
-              <div className="w-12 h-12 bg-red-500/20 rounded-lg flex items-center justify-center mb-6 group-hover:bg-red-500/30 transition-colors">
-                <svg className="w-6 h-6 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="backdrop-blur-sm bg-white/5 rounded-lg p-8 border border-white/10 hover:border-primary/30 transition-all duration-300 group">
+              <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary/30 transition-colors">
+                <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path
                     strokeLinecap="round"
                     strokeLinejoin="round"
@@ -53,7 +53,7 @@ export default function Home() {
                   />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold mb-4 text-white group-hover:text-red-400 transition-colors">
+              <h3 className="text-xl font-semibold mb-4 text-white transition-colors">
                 Open Source
               </h3>
               <p className="text-gray-300 leading-relaxed">
@@ -62,13 +62,13 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="backdrop-blur-sm bg-white/5 rounded-lg p-8 border border-white/10 hover:border-red-500/30 transition-all duration-300 group">
-              <div className="w-12 h-12 bg-red-500/20 rounded-lg flex items-center justify-center mb-6 group-hover:bg-red-500/30 transition-colors">
-                <svg className="w-6 h-6 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="backdrop-blur-sm bg-white/5 rounded-lg p-8 border border-white/10 hover:border-primary/30 transition-all duration-300 group">
+              <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary/30 transition-colors">
+                <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold mb-4 text-white group-hover:text-red-400 transition-colors">
+              <h3 className="text-xl font-semibold mb-4 text-white transition-colors">
                 Level Up
               </h3>
               <p className="text-gray-300 leading-relaxed">
