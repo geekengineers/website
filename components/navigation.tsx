@@ -4,6 +4,7 @@ import { useEffect, useState } from "react"
 import Link from "next/link"
 import { Menu, X, Code2 } from "lucide-react"
 import Logo from "./logo"
+import { Button } from "./ui/button"
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
@@ -20,12 +21,11 @@ export default function Navigation() {
 
   return (
     <nav className="relative z-50 flex justify-center pt-4">
-     <div
-        className={`w-[95%] lg:w-[95%] xl:w-[75%] z-51 transition-[backdrop-filter] duration-300 ${
-          scrolled
+      <div
+        className={`w-[95%] lg:w-[95%] xl:w-[75%] z-51 transition-[backdrop-filter] duration-300 ${scrolled
             ? "fixed top-4 bg-black/20 backdrop-blur-md border border-white/10 rounded-2xl shadow-lg"
             : "absolute bg-transparent backdrop-blur-0 border-transparent shadow-none"
-        }`}
+          }`}
       >
         <div className="mx-auto sm:px-6 lg:px-8 px-8">
           <div className="flex justify-between items-center h-[65px]">
@@ -40,9 +40,8 @@ export default function Navigation() {
               <Link href="/learn" className="text-white hover:text-red-400 transition-colors">Learn</Link>
               <Link
                 href="/join"
-                className="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg transition-colors"
               >
-                Join Us
+                <Button>Join Us</Button>
               </Link>
             </div>
 

@@ -1,4 +1,5 @@
 import Link from "next/link"
+import { Button } from "./ui/button"
 
 export default function Hero() {
   return (
@@ -21,11 +22,11 @@ export default function Hero() {
           {/* Left Column - Content */}
           <div className="text-center lg:text-left">
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent leading-tight">
-              GeekEngineers
+              Geek Engineers
             </h1>
 
             <div className="mb-8">
-              <p className="text-xl md:text-2xl text-red-400 font-medium mb-6 leading-relaxed">
+              <p className="text-xl md:text-2xl text-primary/35 font-medium mb-6 leading-relaxed">
                 "Extremist software engineering guidance for Geeks."
               </p>
               <p className="text-lg md:text-xl text-gray-300 leading-relaxed max-w-2xl mx-auto lg:mx-0">
@@ -36,32 +37,27 @@ export default function Hero() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center mb-8">
-              <Link
-                href="/join"
-                className="px-8 py-4 bg-red-500 hover:bg-red-600 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-red-500/25 w-full sm:w-auto text-center"
-              >
-                Join the Community
+              <Link href="/join">
+                <Button size="xl">Join the Community</Button>
               </Link>
-              <Link
-                href="/projects"
-                className="px-8 py-4 border border-red-500 text-red-400 hover:bg-red-500/10 font-semibold rounded-lg transition-all duration-300 w-full sm:w-auto text-center"
-              >
-                View Projects
+
+              <Link href="/projects">
+                <Button size="xl" variant="outline">View Projects</Button>
               </Link>
             </div>
 
             {/* Stats */}
             <div className="grid grid-cols-3 gap-6 pt-8 border-t border-white/10 max-w-md mx-auto lg:mx-0">
               <div className="text-center lg:text-left">
-                <div className="text-2xl font-bold text-red-400">2+</div>
+                <div className="text-2xl font-bold text-primary/35">2+</div>
                 <div className="text-sm text-gray-400">Years Active</div>
               </div>
               <div className="text-center lg:text-left">
-                <div className="text-2xl font-bold text-red-400">OSS</div>
+                <div className="text-2xl font-bold text-primary/35">OSS</div>
                 <div className="text-sm text-gray-400">Focused</div>
               </div>
               <div className="text-center lg:text-left">
-                <div className="text-2xl font-bold text-red-400">∞</div>
+                <div className="text-2xl font-bold text-primary/35">∞</div>
                 <div className="text-sm text-gray-400">Learning</div>
               </div>
             </div>
