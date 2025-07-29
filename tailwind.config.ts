@@ -1,4 +1,4 @@
-import type { Config } from "tailwindcss"
+import type { Config } from "tailwindcss";
 
 const config: Config = {
   darkMode: ["class"],
@@ -19,7 +19,10 @@ const config: Config = {
     },
     extend: {
       fontFamily: {
-          "kabisat": "KabisatDemo"
+        kabisat: "KabisatDemo",
+        dmsans: "DMSans",
+        meuemontreal: "NeueMontreal",
+        heading: ["NeueMontreal"],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -100,6 +103,6 @@ const config: Config = {
     },
   },
   plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography")],
-} satisfies Config
+} satisfies Config;
 
-export default config
+export default config;

@@ -1,7 +1,7 @@
-import Link from "next/link"
-import { Button } from "./ui/button"
-import Image from "next/image"
-import heroImage from "@/assets/hero-image.png"
+import Link from "next/link";
+import { Button } from "./ui/button";
+import Image from "next/image";
+import heroImage from "@/assets/hero-image.png";
 
 export default function Hero() {
   return (
@@ -23,7 +23,7 @@ export default function Hero() {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left Column - Content */}
           <div className="text-center lg:text-left">
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent leading-tight">
+            <h1 className="font-heading text-4xl md:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent leading-tight">
               Geek Engineers
             </h1>
 
@@ -32,9 +32,10 @@ export default function Hero() {
                 "Extremist software engineering guidance for Geeks."
               </p>
               <p className="text-lg md:text-xl text-gray-300 leading-relaxed max-w-2xl mx-auto lg:mx-0">
-                Join our passionate programming community where software engineers and tech enthusiasts learn, teach,
-                collaborate, and level up their knowledge through open source contributions and recreational
-                programming.
+                Join our passionate programming community where software
+                engineers and tech enthusiasts learn, teach, collaborate, and
+                level up their knowledge through open source contributions and
+                recreational programming.
               </p>
             </div>
 
@@ -44,7 +45,9 @@ export default function Hero() {
               </Link>
 
               <Link href="/projects">
-                <Button size="xl" variant="outline">View Projects</Button>
+                <Button size="xl" variant="outline">
+                  View Projects
+                </Button>
               </Link>
             </div>
 
@@ -78,5 +81,5 @@ export default function Hero() {
         </div>
       </div>
     </section>
-  )
+  );
 }

@@ -1,7 +1,7 @@
-import Hero from "@/components/hero"
-import Navigation from "@/components/navigation"
-import OngoingProjects from "@/components/ongoing-projects"
-import Footer from "@/components/footer"
+import Hero from "@/components/hero";
+import Navigation from "@/components/navigation";
+import OngoingProjects from "@/components/ongoing-projects";
+import Footer from "@/components/footer";
 
 export default function Home() {
   return (
@@ -14,17 +14,24 @@ export default function Home() {
       <section className="pt-10 pb-20 px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">Why Choose Geek Engineers?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
+              Why Choose Geek Engineers?
+            </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              We're not just another programming community. We're extremists who push the boundaries of software
-              engineering excellence.
+              We're not just another programming community. We're extremists who
+              push the boundaries of software engineering excellence.
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             <div className="backdrop-blur-sm bg-white/5 rounded-lg p-8 border border-white/10 transition-all duration-300 group">
               <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-6 transition-colors">
-                <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg
+                  className="w-6 h-6 text-primary"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
                   <path
                     strokeLinecap="round"
                     strokeLinejoin="round"
@@ -37,14 +44,20 @@ export default function Home() {
                 Learn & Teach
               </h3>
               <p className="text-gray-300 leading-relaxed">
-                Share knowledge, mentor others, and grow together in our collaborative learning environment where every
-                member contributes to the collective wisdom.
+                Share knowledge, mentor others, and grow together in our
+                collaborative learning environment where every member
+                contributes to the collective wisdom.
               </p>
             </div>
 
             <div className="backdrop-blur-sm bg-white/5 rounded-lg p-8 border border-white/10 transition-all duration-300 group">
               <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-6 transition-colors">
-                <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg
+                  className="w-6 h-6 text-primary"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
                   <path
                     strokeLinecap="round"
                     strokeLinejoin="round"
@@ -57,23 +70,35 @@ export default function Home() {
                 Open Source
               </h3>
               <p className="text-gray-300 leading-relaxed">
-                Contribute to meaningful projects and build your portfolio with real-world open source experience that
-                makes a lasting impact on the community.
+                Contribute to meaningful projects and build your portfolio with
+                real-world open source experience that makes a lasting impact on
+                the community.
               </p>
             </div>
 
             <div className="backdrop-blur-sm bg-white/5 rounded-lg p-8 border border-white/10 transition-all duration-300 group">
               <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-6 transition-colors">
-                <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                <svg
+                  className="w-6 h-6 text-primary"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M13 10V3L4 14h7v7l9-11h-7z"
+                  />
                 </svg>
               </div>
               <h3 className="text-xl font-semibold mb-4 text-white transition-colors">
                 Level Up
               </h3>
               <p className="text-gray-300 leading-relaxed">
-                Push your limits with extremist software engineering practices and cutting-edge technologies that
-                challenge conventional thinking.
+                Push your limits with extremist software engineering practices
+                and cutting-edge technologies that challenge conventional
+                thinking.
               </p>
             </div>
           </div>
@@ -82,5 +107,5 @@ export default function Home() {
 
       <Footer />
     </div>
-  )
+  );
 }
