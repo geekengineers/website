@@ -2,6 +2,7 @@ import type React from "react";
 import type { Metadata } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
 import "@/styles/globals.css";
+import GridPatternBg from "@/components/grid-pattern";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const jetbrainsMono = JetBrains_Mono({
@@ -26,6 +27,7 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${jetbrainsMono.variable} font-dmsans antialiased bg-gradient-to-br from-gray-900 via-black to-gray-900`}
       >
+        <GridPatternBg />
         {children}
       </body>
     </html>
