@@ -126,7 +126,7 @@ export default function OngoingProjects() {
                   {project.tech.map((tech, techIndex) => (
                     <span
                       key={techIndex}
-                      className="px-3 py-1 bg-primary text-primary-foreground rounded-full text-sm font-medium"
+                      className="px-3 py-1 bg-primary/90 text-primary-foreground rounded-full text-sm font-medium"
                     >
                       {tech}
                     </span>

@@ -1,11 +1,11 @@
-import Link from "next/link"
-import { Calendar, Clock, User, ArrowRight } from "lucide-react"
-import { getBlogPosts } from "@/lib/blog-data"
-import Navigation from "@/components/navigation"
-import Footer from "@/components/footer"
+import Link from "next/link";
+import { Calendar, Clock, User, ArrowRight } from "lucide-react";
+import { getBlogPosts } from "@/lib/blog-data";
+import Navigation from "@/components/navigation";
+import Footer from "@/components/footer";
 
 export default function BlogPage() {
-  const posts = getBlogPosts()
+  const posts = getBlogPosts();
 
   return (
     <div className="min-h-screen">
@@ -15,7 +15,9 @@ export default function BlogPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Header */}
           <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">Articles & Engineering Notes</h1>
+            <h1 className="font-heading text-4xl md:text-6xl font-bold text-white mb-6">
+              Articles & Engineering Notes
+            </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Insights, tutorials, and dev logs from our community members
             </p>
@@ -27,14 +29,14 @@ export default function BlogPage() {
               {posts.map((post) => (
                 <article
                   key={post.slug}
-                  className="group bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 hover:border-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-red-500/10"
+                  className="group bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6"
                 >
                   {/* Tags */}
                   <div className="flex flex-wrap gap-2 mb-4">
                     {post.tags.slice(0, 2).map((tag) => (
                       <span
                         key={tag}
-                        className="px-2 py-1 text-xs font-medium bg-red-500/20 text-red-300 rounded-full border border-red-500/30"
+                        className="px-2 py-1 text-xs font-medium bg-primary text-primary-foreground rounded-full"
                       >
                         {tag}
                       </span>
@@ -42,12 +44,14 @@ export default function BlogPage() {
                   </div>
 
                   {/* Title */}
-                  <h2 className="text-xl font-bold text-white mb-3 group-hover:text-red-400 transition-colors line-clamp-2">
+                  <h2 className="text-xl font-bold text-white mb-3 transition-colors line-clamp-2">
                     {post.title}
                   </h2>
 
                   {/* Excerpt */}
-                  <p className="text-gray-300 mb-4 line-clamp-3 leading-relaxed">{post.excerpt}</p>
+                  <p className="text-gray-300 mb-4 line-clamp-3 leading-relaxed">
+                    {post.excerpt}
+                  </p>
 
                   {/* Meta Info */}
                   <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
@@ -63,14 +67,16 @@ export default function BlogPage() {
                     </div>
                     <div className="flex items-center space-x-1">
                       <Calendar className="h-4 w-4" />
-                      <span>{new Date(post.publishDate).toLocaleDateString()}</span>
+                      <span>
+                        {new Date(post.publishDate).toLocaleDateString()}
+                      </span>
                     </div>
                   </div>
 
                   {/* Read More Link */}
                   <Link
                     href={`/blog/${post.slug}`}
-                    className="inline-flex items-center space-x-2 text-red-400 hover:text-red-300 transition-colors group/link"
+                    className="inline-flex items-center space-x-2 text-foreground transition-colors group/link"
                   >
                     <span className="font-medium">Read More</span>
                     <ArrowRight className="h-4 w-4 group-hover/link:translate-x-1 transition-transform" />
@@ -82,11 +88,15 @@ export default function BlogPage() {
             /* Empty State */
             <div className="text-center py-16">
               <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-12 max-w-md mx-auto">
-                <h3 className="text-2xl font-bold text-white mb-4">No Articles Yet</h3>
-                <p className="text-gray-300 mb-6">We're working on some amazing content. Check back soon!</p>
+                <h3 className="text-2xl font-bold text-white mb-4">
+                  No Articles Yet
+                </h3>
+                <p className="text-gray-300 mb-6">
+                  We're working on some amazing content. Check back soon!
+                </p>
                 <Link
                   href="/join"
-                  className="inline-flex items-center space-x-2 bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-lg transition-colors"
+                  className="inline-flex items-center space-x-2 bg-red-600 text-white px-6 py-3 rounded-lg transition-colors"
                 >
                   <span>Join Our Community</span>
                   <ArrowRight className="h-4 w-4" />
@@ -99,5 +109,5 @@ export default function BlogPage() {
 
       <Footer />
     </div>
-  )
+  );
 }

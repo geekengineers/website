@@ -1,10 +1,11 @@
-"use client"
+"use client";
 
-import type React from "react"
+import type React from "react";
 
-import { useState } from "react"
-import Navigation from "@/components/navigation"
-import Footer from "@/components/footer"
+import { useState } from "react";
+import Navigation from "@/components/navigation";
+import Footer from "@/components/footer";
+import { Button } from "@/components/ui/button";
 
 export default function Join() {
   const [formData, setFormData] = useState({
@@ -14,20 +15,24 @@ export default function Join() {
     experience: "",
     interests: "",
     contribution: "",
-  })
+  });
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
+    e.preventDefault();
     // Handle form submission
-    console.log("Form submitted:", formData)
-  }
+    console.log("Form submitted:", formData);
+  };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >,
+  ) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
-    })
-  }
+    });
+  };
 
   return (
     <div className="min-h-screen text-white">
@@ -37,21 +42,28 @@ export default function Join() {
         <div className="max-w-5xl mx-auto">
           {/* Header */}
           <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Join GeekEngineers</h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">
+              Join GeekEngineers
+            </h1>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Ready to level up your skills and contribute to meaningful open source projects? Join our community of
-              passionate developers.
+              Ready to level up your skills and contribute to meaningful open
+              source projects? Join our community of passionate developers.
             </p>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Application Form */}
             <div className="backdrop-blur-sm bg-white/5 rounded-2xl p-8 border border-white/10">
-              <h2 className="text-2xl font-semibold mb-6 text-red-400">Application Form</h2>
+              <h2 className="text-2xl font-semibold mb-6 text-primary">
+                Application Form
+              </h2>
 
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium mb-2 text-gray-300">
+                  <label
+                    htmlFor="name"
+                    className="block text-sm font-medium mb-2 text-gray-300"
+                  >
                     Full Name *
                   </label>
                   <input
@@ -61,13 +73,16 @@ export default function Join() {
                     required
                     value={formData.name}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 bg-white/5 border border-white/20 rounded-lg focus:border-red-500 focus:ring-1 focus:ring-red-500 outline-none transition-colors text-white placeholder-gray-400"
+                    className="w-full px-4 py-3 bg-white/5 border border-white/20 rounded-lg focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors text-white placeholder-gray-400"
                     placeholder="Your full name"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium mb-2 text-gray-300">
+                  <label
+                    htmlFor="email"
+                    className="block text-sm font-medium mb-2 text-gray-300"
+                  >
                     Email Address *
                   </label>
                   <input
@@ -77,13 +92,16 @@ export default function Join() {
                     required
                     value={formData.email}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 bg-white/5 border border-white/20 rounded-lg focus:border-red-500 focus:ring-1 focus:ring-red-500 outline-none transition-colors text-white placeholder-gray-400"
+                    className="w-full px-4 py-3 bg-white/5 border border-white/20 rounded-lg focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors text-white placeholder-gray-400"
                     placeholder="your.email@example.com"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="github" className="block text-sm font-medium mb-2 text-gray-300">
+                  <label
+                    htmlFor="github"
+                    className="block text-sm font-medium mb-2 text-gray-300"
+                  >
                     GitHub Profile
                   </label>
                   <input
@@ -92,13 +110,16 @@ export default function Join() {
                     name="github"
                     value={formData.github}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 bg-white/5 border border-white/20 rounded-lg focus:border-red-500 focus:ring-1 focus:ring-red-500 outline-none transition-colors text-white placeholder-gray-400"
+                    className="w-full px-4 py-3 bg-white/5 border border-white/20 rounded-lg focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors text-white placeholder-gray-400"
                     placeholder="https://github.com/yourusername"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="experience" className="block text-sm font-medium mb-2 text-gray-300">
+                  <label
+                    htmlFor="experience"
+                    className="block text-sm font-medium mb-2 text-gray-300"
+                  >
                     Experience Level *
                   </label>
                   <select
@@ -107,18 +128,23 @@ export default function Join() {
                     required
                     value={formData.experience}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 bg-white/5 border border-white/20 rounded-lg focus:border-red-500 focus:ring-1 focus:ring-red-500 outline-none transition-colors text-white"
+                    className="w-full px-4 py-3 bg-white/5 border border-white/20 rounded-lg focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors text-white"
                   >
                     <option value="">Select your experience level</option>
                     <option value="beginner">Beginner (0-2 years)</option>
-                    <option value="intermediate">Intermediate (2-5 years)</option>
+                    <option value="intermediate">
+                      Intermediate (2-5 years)
+                    </option>
                     <option value="advanced">Advanced (5+ years)</option>
                     <option value="expert">Expert (10+ years)</option>
                   </select>
                 </div>
 
                 <div>
-                  <label htmlFor="interests" className="block text-sm font-medium mb-2 text-gray-300">
+                  <label
+                    htmlFor="interests"
+                    className="block text-sm font-medium mb-2 text-gray-300"
+                  >
                     Technical Interests *
                   </label>
                   <textarea
@@ -128,13 +154,16 @@ export default function Join() {
                     rows={3}
                     value={formData.interests}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 bg-white/5 border border-white/20 rounded-lg focus:border-red-500 focus:ring-1 focus:ring-red-500 outline-none transition-colors text-white placeholder-gray-400 resize-none"
+                    className="w-full px-4 py-3 bg-white/5 border border-white/20 rounded-lg focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors text-white placeholder-gray-400 resize-none"
                     placeholder="What technologies, languages, or areas of software development interest you most?"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="contribution" className="block text-sm font-medium mb-2 text-gray-300">
+                  <label
+                    htmlFor="contribution"
+                    className="block text-sm font-medium mb-2 text-gray-300"
+                  >
                     How would you like to contribute? *
                   </label>
                   <textarea
@@ -144,77 +173,106 @@ export default function Join() {
                     rows={4}
                     value={formData.contribution}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 bg-white/5 border border-white/20 rounded-lg focus:border-red-500 focus:ring-1 focus:ring-red-500 outline-none transition-colors text-white placeholder-gray-400 resize-none"
+                    className="w-full px-4 py-3 bg-white/5 border border-white/20 rounded-lg focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors text-white placeholder-gray-400 resize-none"
                     placeholder="Tell us about your goals, what you'd like to learn, teach, or contribute to the community..."
                   />
                 </div>
 
-                <button
-                  type="submit"
-                  className="w-full py-4 bg-red-500 hover:bg-red-600 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105"
-                >
+                <Button type="submit" size="xl" className="w-full h-14">
                   Submit Application
-                </button>
+                </Button>
+                {/* <button className="w-full py-4 bg-p hover:bg-red-600 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105"></button> */}
               </form>
             </div>
 
             {/* Community Info */}
             <div className="space-y-8">
               <div className="backdrop-blur-sm bg-white/5 rounded-xl p-8 border border-white/10">
-                <h3 className="text-xl font-semibold mb-4 text-red-400">What to Expect</h3>
+                <h3 className="text-xl font-semibold mb-4 text-primary">
+                  What to Expect
+                </h3>
                 <ul className="space-y-3 text-gray-300">
                   <li className="flex items-start space-x-3">
                     <svg
-                      className="w-5 h-5 text-red-400 mt-0.5 flex-shrink-0"
+                      className="w-5 h-5 text-primary mt-0.5 flex-shrink-0"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
                     >
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M5 13l4 4L19 7"
+                      />
                     </svg>
-                    <span>Weekly code review sessions and technical discussions</span>
+                    <span>
+                      Weekly code review sessions and technical discussions
+                    </span>
                   </li>
                   <li className="flex items-start space-x-3">
                     <svg
-                      className="w-5 h-5 text-red-400 mt-0.5 flex-shrink-0"
+                      className="w-5 h-5 text-primary mt-0.5 flex-shrink-0"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
                     >
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M5 13l4 4L19 7"
+                      />
                     </svg>
                     <span>Collaborative open source project development</span>
                   </li>
                   <li className="flex items-start space-x-3">
                     <svg
-                      className="w-5 h-5 text-red-400 mt-0.5 flex-shrink-0"
+                      className="w-5 h-5 text-primary mt-0.5 flex-shrink-0"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
                     >
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M5 13l4 4L19 7"
+                      />
                     </svg>
                     <span>Mentorship opportunities and pair programming</span>
                   </li>
                   <li className="flex items-start space-x-3">
                     <svg
-                      className="w-5 h-5 text-red-400 mt-0.5 flex-shrink-0"
+                      className="w-5 h-5 text-primary mt-0.5 flex-shrink-0"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
                     >
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M5 13l4 4L19 7"
+                      />
                     </svg>
-                    <span>Access to exclusive learning resources and workshops</span>
+                    <span>
+                      Access to exclusive learning resources and workshops
+                    </span>
                   </li>
                   <li className="flex items-start space-x-3">
                     <svg
-                      className="w-5 h-5 text-red-400 mt-0.5 flex-shrink-0"
+                      className="w-5 h-5 text-primary mt-0.5 flex-shrink-0"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
                     >
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M5 13l4 4L19 7"
+                      />
                     </svg>
                     <span>Network with passionate developers worldwide</span>
                   </li>
@@ -222,40 +280,50 @@ export default function Join() {
               </div>
 
               <div className="backdrop-blur-sm bg-white/5 rounded-xl p-8 border border-white/10">
-                <h3 className="text-xl font-semibold mb-4 text-red-400">Community Guidelines</h3>
+                <h3 className="text-xl font-semibold mb-4 text-primary">
+                  Community Guidelines
+                </h3>
                 <div className="space-y-3 text-gray-300 text-sm">
                   <p>
-                    <strong className="text-white">Respect & Inclusion:</strong> We welcome developers of all
-                    backgrounds and skill levels.
+                    <strong className="text-white">Respect & Inclusion:</strong>{" "}
+                    We welcome developers of all backgrounds and skill levels.
                   </p>
                   <p>
-                    <strong className="text-white">Open Source First:</strong> Commitment to contributing to and
-                    supporting open source projects.
+                    <strong className="text-white">Open Source First:</strong>{" "}
+                    Commitment to contributing to and supporting open source
+                    projects.
                   </p>
                   <p>
-                    <strong className="text-white">Continuous Learning:</strong> Embrace a growth mindset and help
-                    others learn.
+                    <strong className="text-white">Continuous Learning:</strong>{" "}
+                    Embrace a growth mindset and help others learn.
                   </p>
                   <p>
-                    <strong className="text-white">Quality Focus:</strong> Strive for excellence in code quality and
-                    engineering practices.
+                    <strong className="text-white">Quality Focus:</strong>{" "}
+                    Strive for excellence in code quality and engineering
+                    practices.
                   </p>
                 </div>
               </div>
 
               <div className="backdrop-blur-sm bg-white/5 rounded-xl p-8 border border-white/10">
-                <h3 className="text-xl font-semibold mb-4 text-red-400">Questions?</h3>
+                <h3 className="text-xl font-semibold mb-4 text-primary">
+                  Questions?
+                </h3>
                 <p className="text-gray-300 mb-4">
-                  Have questions about joining or want to learn more about our community?
+                  Have questions about joining or want to learn more about our
+                  community?
                 </p>
                 <div className="space-y-2">
                   <a
                     href="mailto:hello@geekengineers.dev"
-                    className="block text-red-400 hover:text-red-300 transition-colors"
+                    className="block text-foreground transition-colors"
                   >
                     info@geekengineers.ir
                   </a>
-                  <a href="#" className="block text-red-400 hover:text-red-300 transition-colors">
+                  <a
+                    href="#"
+                    className="block text-foreground transition-colors"
+                  >
                     Join our Telegram
                   </a>
                 </div>
@@ -267,5 +335,5 @@ export default function Join() {
 
       <Footer />
     </div>
-  )
+  );
 }
