@@ -4,29 +4,29 @@ import { Button } from "./ui/button";
 export default function OngoingProjects() {
   const ongoingProjects = [
     {
-      name: "CodeReview AI",
+      name: "Cyrus Programming Language",
       description:
-        "AI-powered code review automation tool that helps maintain code quality standards across repositories with intelligent suggestions.",
-      tech: ["TypeScript", "OpenAI API", "Node.js", "GitHub API"],
-      progress: 75,
-      contributors: 8,
-      status: "Active Development",
-      github: "https://github.com/geekengineers/codereview-ai",
-      lastUpdate: "2 days ago",
-    },
-    {
-      name: "DevMetrics Dashboard",
-      description:
-        "Real-time analytics dashboard for tracking development team productivity, code quality metrics, and project insights.",
-      tech: ["React", "Next.js", "PostgreSQL", "D3.js"],
+        "Cyrus is a mid-level, imperative programming language designed for developers who want modern power without modern complexity. It is built with performance and clarity in mind, featuring a lightweight memory model, zero runtime dependency, and a clean, expressive syntax designed from scratch. If you are familiar with C, Go, you’ll feel right at home — and probably happier.",
+      tech: ["Rust", "LLVM 18", "Flake (Nix)"],
       progress: 60,
-      contributors: 12,
-      status: "Beta Testing",
-      github: "https://github.com/geekengineers/dev-metrics",
-      lastUpdate: "1 week ago",
+      contributors: 5,
+      status: "Active Development",
+      github: "https://github.com/cyrus-lang/Cyrus",
+      lastUpdate: "In progress",
     },
     {
-      name: "Terminal Toolkit",
+      name: "Kavka Messenger",
+      description:
+        "Kavka Messenger combines the convenience of a centralized system with a strong commitment to security and transparency. While your data is stored on robust central servers for maximum stability and uptime, Kavka ensures that your messages remain accessible and protected at all times—giving you peace of mind that your conversations are in safe hands.",
+      tech: ["Go", "MongoDB", "Redis", "NATS", "Angular", "Docker"],
+      progress: 60,
+      contributors: 7,
+      status: "Last Stages",
+      github: "https://github.com/kavkaco/Kavka-Core",
+      lastUpdate: "6 month ago",
+    },
+    {
+      name: "Go Hexagonal Architecture",
       description:
         "Collection of powerful CLI tools for developers to streamline common development workflows and automate repetitive tasks.",
       tech: ["Rust", "CLI", "Git", "Docker"],
