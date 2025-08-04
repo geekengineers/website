@@ -1,12 +1,12 @@
 export interface BlogPost {
-  slug: string
-  title: string
-  excerpt: string
-  content: string
-  author: string
-  publishDate: string
-  readTime: string
-  tags: string[]
+  slug: string;
+  title: string;
+  excerpt: string;
+  content: string;
+  author: string;
+  publishDate: string;
+  readTime: string;
+  tags: string[];
 }
 
 export const blogPosts: BlogPost[] = [
@@ -17,7 +17,7 @@ export const blogPosts: BlogPost[] = [
       "Exploring the philosophy behind open source development and how it shapes our community's approach to building software that matters.",
     content: `# Why We Love Open Source: Building the Future Together
 
-Open source software has fundamentally changed how we think about technology, collaboration, and innovation. At GeekEngineers, we believe that the best solutions emerge when brilliant minds work together without barriers.
+Open source software has fundamentally changed how we think about technology, collaboration, and innovation. At Geek Engineers, we believe that the best solutions emerge when brilliant minds work together without barriers.
 
 ## The Power of Collective Intelligence
 
@@ -27,7 +27,7 @@ When developers from around the world can contribute to a project, magic happens
 // Example: A simple contribution that made a big difference
 function optimizeSearch(query, data) {
   // Original implementation
-  return data.filter(item => 
+  return data.filter(item =>
     item.title.toLowerCase().includes(query.toLowerCase())
   );
 }
@@ -162,7 +162,7 @@ After building and maintaining APIs that serve millions of requests daily, I've 
 class UserSession:
     def __init__(self):
         self.user_data = {}
-    
+
     def get_user(self, user_id):
         if user_id in self.user_data:
             return self.user_data[user_id]
@@ -329,12 +329,15 @@ Great code reviews are about more than finding bugs – they're about building b
     readTime: "7 min read",
     tags: ["Code Review", "Team", "Best Practices", "Software Engineering"],
   },
-]
+];
 
 export function getBlogPosts(): BlogPost[] {
-  return blogPosts.sort((a, b) => new Date(b.publishDate).getTime() - new Date(a.publishDate).getTime())
+  return blogPosts.sort(
+    (a, b) =>
+      new Date(b.publishDate).getTime() - new Date(a.publishDate).getTime(),
+  );
 }
 
 export function getBlogPost(slug: string): BlogPost | undefined {
-  return blogPosts.find((post) => post.slug === slug)
+  return blogPosts.find((post) => post.slug === slug);
 }

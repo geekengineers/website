@@ -1,6 +1,7 @@
 import Navigation from "@/components/navigation";
 import Link from "next/link";
 import Footer from "@/components/footer";
+import { Button } from "@/components/ui/button";
 
 export default function Projects() {
   const projects = [
@@ -135,11 +136,8 @@ export default function Projects() {
                 on. Share your ideas with the community and let's build
                 something amazing together.
               </p>
-              <Link
-                href="/join"
-                className="inline-flex items-center px-8 py-4 bg-red-500 hover:bg-red-600 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105"
-              >
-                Propose a Project
+              <Link href="/join">
+                <Button size="xl">Propose a Project</Button>
               </Link>
             </div>
           </div>

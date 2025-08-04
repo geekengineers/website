@@ -11,7 +11,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "GeekEngineers - Software Engineering Community",
+  title: "Geek Engineers - Software Engineering Community",
   description:
     "Join our passionate programming community for extremist software engineering guidance, open source contributions, and collaborative learning.",
   generator: "v0.dev",

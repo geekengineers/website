@@ -43,7 +43,7 @@ export default function Join() {
           {/* Header */}
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Join GeekEngineers
+              Join Geek Engineers
             </h1>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               Ready to level up your skills and contribute to meaningful open
