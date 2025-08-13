@@ -2,43 +2,11 @@ import Navigation from "@/components/navigation";
 import Link from "next/link";
 import Footer from "@/components/footer";
 import { Button } from "@/components/ui/button";
+import projectLists from "../../components/projects.json";
 
 export default function Projects() {
-  const projects = [
-    {
-      name: "CodeReview Bot",
-      description:
-        "AI-powered code review automation tool that helps maintain code quality standards across repositories.",
-      tech: ["TypeScript", "Node.js", "OpenAI API", "GitHub API"],
-      github: "https://github.com/geekengineers/codereview-bot",
-      status: "Active",
-    },
-    {
-      name: "DevMetrics Dashboard",
-      description:
-        "Real-time analytics dashboard for tracking development team productivity and code quality metrics.",
-      tech: ["React", "Next.js", "PostgreSQL", "D3.js"],
-      github: "https://github.com/geekengineers/dev-metrics",
-      status: "Active",
-    },
-    {
-      name: "Terminal Toolkit",
-      description:
-        "Collection of CLI tools for developers to streamline common development workflows and tasks.",
-      tech: ["Rust", "CLI", "Git", "Docker"],
-      github: "https://github.com/geekengineers/terminal-toolkit",
-      status: "Beta",
-    },
-    {
-      name: "Learning Path Generator",
-      description:
-        "Personalized learning path generator for developers based on their current skills and career goals.",
-      tech: ["Python", "FastAPI", "Machine Learning", "React"],
-      github: "https://github.com/geekengineers/learning-paths",
-      status: "Planning",
-    },
-  ];
-
+  const projects = projectLists.filter(project => project.show_on_home === true);
+  
   return (
     <div className="min-h-screen text-white">
       <Navigation />

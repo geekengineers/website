@@ -1,53 +1,9 @@
 import Link from "next/link";
 import { Button } from "./ui/button";
+import projectLists from "./projects.json";
 
 export default function OngoingProjects() {
-  const ongoingProjects = [
-    {
-      name: "Cyrus Programming Language",
-      description:
-        "Cyrus is a mid-level, imperative programming language designed for developers who want modern power without modern complexity. It is built with performance and clarity in mind, featuring a lightweight memory model, zero runtime dependency, and a clean, expressive syntax designed from scratch. If you are familiar with C, Go, you’ll feel right at home — and probably happier.",
-      tech: ["Rust", "LLVM 18", "Flake (Nix)"],
-      progress: 60,
-      contributors: 5,
-      status: "Active Development",
-      github: "https://github.com/cyrus-lang/Cyrus",
-      lastUpdate: "In progress",
-    },
-    {
-      name: "Kavka Messenger",
-      description:
-        "Kavka Messenger combines the convenience of a centralized system with a strong commitment to security and transparency. While your data is stored on robust central servers for maximum stability and uptime, Kavka ensures that your messages remain accessible and protected at all times—giving you peace of mind that your conversations are in safe hands.",
-      tech: ["Go", "MongoDB", "Redis", "NATS", "Angular", "Docker"],
-      progress: 60,
-      contributors: 7,
-      status: "Last Stages",
-      github: "https://github.com/kavkaco/Kavka-Core",
-      lastUpdate: "6 month ago",
-    },
-    {
-      name: "Go Hexagonal Architecture",
-      description:
-        "Collection of powerful CLI tools for developers to streamline common development workflows and automate repetitive tasks.",
-      tech: ["Rust", "CLI", "Git", "Docker"],
-      progress: 40,
-      contributors: 5,
-      status: "Early Development",
-      github: "https://github.com/geekengineers/terminal-toolkit",
-      lastUpdate: "3 days ago",
-    },
-    {
-      name: "Learning Path Generator",
-      description:
-        "Personalized learning path generator that creates custom roadmaps based on developers' current skills and career goals.",
-      tech: ["Python", "FastAPI", "ML", "React"],
-      progress: 25,
-      contributors: 6,
-      status: "Planning Phase",
-      github: "https://github.com/geekengineers/learning-paths",
-      lastUpdate: "5 days ago",
-    },
-  ];
+  const ongoingProjects = projectLists
 
   return (
     <section className="pb-20 px-6">

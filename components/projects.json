@@ -1,0 +1,112 @@
+[
+  {
+    "name": "Cyrus Programming Language",
+    "description": "Cyrus is a mid-level, imperative programming language designed for developers who want modern power without modern complexity. It is built with performance and clarity in mind, featuring a lightweight memory model, zero runtime dependency, and a clean, expressive syntax designed from scratch. If you are familiar with C, Go, you’ll feel right at home — and probably happier.",
+    "tech": ["Rust", "LLVM 18", "Flake (Nix)"],
+    "progress": 60,
+    "contributors": 5,
+    "status": "Active Development",
+    "github": "https://github.com/cyrus-lang/Cyrus",
+    "lastUpdate": "In progress",
+    "show_on_home":false
+  },
+  {
+    "name": "Kavka Messenger",
+    "description": "Kavka Messenger combines the convenience of a centralized system with a strong commitment to security and transparency. While your data is stored on robust central servers for maximum stability and uptime, Kavka ensures that your messages remain accessible and protected at all times—giving you peace of mind that your conversations are in safe hands.",
+    "tech": ["Go", "MongoDB", "Redis", "NATS", "Angular", "Docker"],
+    "progress": 60,
+    "contributors": 7,
+    "status": "Last Stages",
+    "github": "https://github.com/kavkaco/Kavka-Core",
+    "lastUpdate": "6 month ago",
+    "show_on_home":false
+  },
+  {
+    "name": "Go Hexagonal Architecture",
+    "description": "Collection of powerful CLI tools for developers to streamline common development workflows and automate repetitive tasks.",
+    "tech": ["Rust", "CLI", "Git", "Docker"],
+    "progress": 40,
+    "contributors": 5,
+    "status": "Early Development",
+    "github": "https://github.com/geekengineers/terminal-toolkit",
+    "lastUpdate": "3 days ago",
+    "show_on_home":false
+  },
+  {
+    "name": "Learning Path Generator",
+    "description": "Personalized learning path generator that creates custom roadmaps based on developers' current skills and career goals.",
+    "tech": ["Python", "FastAPI", "ML", "React"],
+    "progress": 25,
+    "contributors": 6,
+    "status": "Planning Phase",
+    "github": "https://github.com/geekengineers/learning-paths",
+    "lastUpdate": "5 days ago",
+    "show_on_home":false
+  },
+  {
+    "name": "Ticket",
+    "description": "A practice project is designed based on distributed systems principles,and as an exercise with event driven architecture(EDA), making it approachable for anyone wanting dive into EDA world.",
+    "tech": ["Golang", "NATS", "PostgreSQL", "Docker", "Fiber"],
+    "progress": 60,
+    "contributors": 0,
+    "status": "Active Development",
+    "github": "https://github.com/AssassinRobot/Ticket",
+    "lastUpdate": "In progress",
+    "show_on_home":false
+  },
+  {
+    "name": "Author",
+    "description": "Book management system,a simple practice project for learning GraphQL basics for who interested in",
+    "tech": ["Golang", "GraphQL", "Docker", "PostgreSQL"],
+    "progress": 80,
+    "contributors": 0,
+    "status": "Almost done",
+    "github": "https://github.com/AssassinRobot/author",
+    "lastUpdate": "7 months ago",
+    "show_on_home":false
+  },
+  {
+    "name": "Personal Blog",
+    "description": "Robust bloging platform,including lots of features check out github page for more information",
+    "tech": ["Golang", "Gin", "Docker", "PostgreSQL", "Redis", "MinIO", "JWT"],
+    "progress": 70,
+    "contributors": 0,
+    "status": "Last Stages",
+    "github": "https://github.com/personal-pulpit",
+    "lastUpdate": "Last month",
+    "show_on_home":false
+    
+  },
+  {
+    "name": "CodeReview Bot",
+    "description": "AI-powered code review automation tool that helps maintain code quality standards across repositories.",
+    "tech": ["TypeScript", "Node.js", "OpenAI API", "GitHub API"],
+    "github": "https://github.com/geekengineers/codereview-bot",
+    "status": "Active",
+    "show_on_home":true
+  },
+  {
+    "name": "DevMetrics Dashboard",
+    "description": "Real-time analytics dashboard for tracking development team productivity and code quality metrics.",
+    "tech": ["React", "Next.js", "PostgreSQL", "D3.js"],
+    "github": "https://github.com/geekengineers/dev-metrics",
+    "status": "Active",
+    "show_on_home":true
+  },
+  {
+    "name": "Terminal Toolkit",
+    "description": "Collection of CLI tools for developers to streamline common development workflows and tasks.",
+    "tech": ["Rust", "CLI", "Git", "Docker"],
+    "github": "https://github.com/geekengineers/terminal-toolkit",
+    "status": "Beta",
+    "show_on_home":true
+  },
+  {
+    "name": "Learning Path Generator",
+    "description": "Personalized learning path generator for developers based on their current skills and career goals.",
+    "tech": ["Python", "FastAPI", "Machine Learning", "React"],
+    "github": "https://github.com/geekengineers/learning-paths",
+    "status": "Planning",
+    "show_on_home":true
+  }
+]
