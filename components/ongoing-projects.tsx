@@ -47,6 +47,39 @@ export default function OngoingProjects() {
       github: "https://github.com/geekengineers/learning-paths",
       lastUpdate: "5 days ago",
     },
+    {
+      name: "Ticket",
+      description:
+        "A practice project is designed based on distributed systems principles,and as an exercise with event driven architecture(EDA), making it approachable for anyone wanting dive into EDA world.",
+      tech: ["Golang", "NATS", "PostgreSQL", "Docker","Fiber"],
+      progress: 60,
+      contributors: 0,
+      status: "Active Development",
+      github: "https://github.com/AssassinRobot/Ticket",
+      lastUpdate: "In progress",
+    },
+    {
+      name: "Author",
+      description:
+        "Book management system,a simple practice project for learning GraphQL basics for who interested in",
+      tech: ["Golang","GraphQL","Docker","PostgreSQL"],
+      progress: 80,
+      contributors: 0,
+      status: "Almost done",
+      github: "https://github.com/AssassinRobot/author",
+      lastUpdate: "7 months ago",
+    },
+    {
+      name: "Personal Blog",
+      description:
+        "Robust bloging platform,including lots of features check out github page for more information",
+      tech: ["Golang","Gin","Docker","PostgreSQL","Redis","MinIO","JWT"],
+      progress: 70,
+      contributors: 0,
+      status: "Last Stages",
+      github: "https://github.com/personal-pulpit",
+      lastUpdate: "Last month",
+    },
   ];
 
   return (
