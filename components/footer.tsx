@@ -38,7 +38,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/learn"
+                  href="/books"
                   className="text-gray-400 hover:text-primary transition-colors text-sm"
                 >
                   Learning Resources

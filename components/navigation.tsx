@@ -112,10 +112,10 @@ export default function Navigation() {
                   Blog
                 </Link>
                 <Link
-                  href="/learn"
+                  href="/books"
                   className="text-white hover:text-primary transition-colors"
                 >
-                  Learn
+                  Books
                 </Link>
                 <Link href="/join">
                   <Button>Join Us</Button>

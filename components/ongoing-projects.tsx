@@ -1,9 +1,29 @@
 import Link from "next/link";
 import { Button } from "./ui/button";
-import projectLists from "./projects.json";
+import projectsData from "@/content/projects.json";
+
+interface OngoingProject {
+  title: string;
+  description: string;
+  tech: string[]; 
+  github: string;
+  status: string;
+  progress: number;
+  contributors: number;
+  lastUpdate: string;
+}
 
 export default function OngoingProjects() {
-  const ongoingProjects = projectLists
+  const ongoingProjects: OngoingProject[] = projectsData.ongoingProjects.map((p) => ({
+    title: p.name,
+    description: p.description,
+    tech: p.tech,
+    github: p.github,
+    status: p.status,
+    progress: p.progress,
+    contributors: p.contributors,
+    lastUpdate: p.lastUpdate,
+  }));
 
   return (
     <section className="pb-20 px-6">
@@ -31,18 +51,17 @@ export default function OngoingProjects() {
               <div className="flex items-start justify-between mb-4">
                 <div>
                   <h3 className="text-xl font-semibold text-white mb-2 transition-colors">
-                    {project.name}
+                    {project.title}
                   </h3>
                   <span
-                    className={`px-3 py-1 rounded-full text-xs font-medium ${
-                      project.status === "Active Development"
+                    className={`px-3 py-1 rounded-full text-xs font-medium ${project.status === "Active Development"
                         ? "bg-green-500/20 text-green-400"
                         : project.status === "Beta Testing"
                           ? "bg-blue-500/20 text-blue-400"
                           : project.status === "Early Development"
                             ? "bg-yellow-500/20 text-yellow-400"
                             : "bg-purple-500/20 text-purple-400"
-                    }`}
+                      }`}
                   >
                     {project.status}
                   </span>

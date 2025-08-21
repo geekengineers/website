@@ -2,11 +2,25 @@ import Navigation from "@/components/navigation";
 import Link from "next/link";
 import Footer from "@/components/footer";
 import { Button } from "@/components/ui/button";
-import projectLists from "../../components/projects.json";
+import projectsData from "@/content/projects.json";
+
+interface ProjectJSON {
+  title: string;
+  description: string;
+  tech: string[];
+  github: string;
+  status: string;
+}
 
 export default function Projects() {
-  const projects = projectLists.filter(project => project.show_on_home === true);
-  
+  const projects: ProjectJSON[] = projectsData.projects.map((p) => ({
+    title: p.name,
+    description: p.description,
+    tech: p.tech, 
+    github: p.github,
+    status: p.status,
+  }));
+
   return (
     <div className="min-h-screen text-white">
       <Navigation />
@@ -33,16 +47,15 @@ export default function Projects() {
               >
                 <div className="flex items-start justify-between mb-4">
                   <h3 className="text-xl font-semibold text-white">
-                    {project.name}
+                    {project.title}
                   </h3>
                   <span
-                    className={`px-3 py-1 rounded-full text-xs font-medium ${
-                      project.status === "Active"
+                    className={`px-3 py-1 rounded-full text-xs font-medium ${project.status === "Active"
                         ? "bg-green-500/20 text-green-400"
                         : project.status === "Beta"
                           ? "bg-yellow-500/20 text-yellow-400"
                           : "bg-blue-500/20 text-blue-400"
-                    }`}
+                      }`}
                   >
                     {project.status}
                   </span>
