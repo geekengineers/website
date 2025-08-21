@@ -77,6 +77,17 @@
     "show_on_home":false
     
   },
+    {
+    "name": "Bandcamper",
+    "description": "CLI Bandcamp downloader with support for downloading albums, tracks, and wishlists of other users",
+    "tech": ["Golang"],
+    "contributors": 1,
+    "status": "Active Development",
+    "github": "https://github.com/AssassinRobot/Bandcamper",
+    "lastUpdate": "In progress",
+    "show_on_home":false
+    
+  },
   {
     "name": "CodeReview Bot",
     "description": "AI-powered code review automation tool that helps maintain code quality standards across repositories.",
