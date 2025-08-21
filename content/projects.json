@@ -1,0 +1,73 @@
+{
+  "ongoingProjects": [
+    {
+      "name": "Cyrus Programming Language",
+      "description": "Cyrus is a mid-level, imperative programming language designed for developers who want modern power without modern complexity. It is built with performance and clarity in mind, featuring a lightweight memory model, zero runtime dependency, and a clean, expressive syntax designed from scratch.",
+      "tech": [
+        "Rust",
+        "LLVM 18",
+        "Flake (Nix)"
+      ],
+      "progress": 60,
+      "contributors": 5,
+      "status": "Active Development",
+      "github": "https://github.com/cyrus-lang/Cyrus",
+      "lastUpdate": "In progress"
+    },
+    {
+      "name": "Kavka Messenger",
+      "description": "Kavka Messenger combines the convenience of a centralized system with a strong commitment to security and transparency. While your data is stored on robust central servers for maximum stability and uptime, Kavka ensures that your messages remain accessible and protected at all times—giving you peace of mind that your conversations are in safe hands.",
+      "tech": [
+        "Go",
+        "MongoDB",
+        "Redis",
+        "NATS",
+        "Angular",
+        "Docker"
+      ],
+      "progress": 60,
+      "contributors": 7,
+      "status": "Last Stages",
+      "github": "https://github.com/kavkaco/Kavka-Core",
+      "lastUpdate": "6 month ago"
+    }
+  ],
+  "projects": [
+    {
+      "name": "CodeReview Bot",
+      "description": "AI-powered code review automation tool that helps maintain code quality standards across repositories.",
+      "tech": [
+        "TypeScript",
+        "Node.js",
+        "OpenAI API",
+        "GitHub API"
+      ],
+      "github": "https://github.com/geekengineers/codereview-bot",
+      "status": "Active"
+    },
+    {
+      "name": "DevMetrics Dashboard",
+      "description": "Real-time analytics dashboard for tracking development team productivity and code quality metrics.",
+      "tech": [
+        "React",
+        "Next.js",
+        "PostgreSQL",
+        "D3.js"
+      ],
+      "github": "https://github.com/geekengineers/dev-metrics",
+      "status": "Active"
+    },
+    {
+      "name": "Terminal Toolkit",
+      "description": "Collection of CLI tools for developers to streamline common development workflows and tasks.",
+      "tech": [
+        "Rust",
+        "CLI",
+        "Git",
+        "Docker"
+      ],
+      "github": "https://github.com/geekengineers/terminal-toolkit",
+      "status": "Beta"
+    }
+  ]
+}

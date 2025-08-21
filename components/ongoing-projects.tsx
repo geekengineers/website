@@ -1,86 +1,29 @@
 import Link from "next/link";
 import { Button } from "./ui/button";
+import projectsData from "@/content/projects.json";
+
+interface OngoingProject {
+  title: string;
+  description: string;
+  tech: string[]; 
+  github: string;
+  status: string;
+  progress: number;
+  contributors: number;
+  lastUpdate: string;
+}
 
 export default function OngoingProjects() {
-  const ongoingProjects = [
-    {
-      name: "Cyrus Programming Language",
-      description:
-        "Cyrus is a mid-level, imperative programming language designed for developers who want modern power without modern complexity. It is built with performance and clarity in mind, featuring a lightweight memory model, zero runtime dependency, and a clean, expressive syntax designed from scratch. If you are familiar with C, Go, you’ll feel right at home — and probably happier.",
-      tech: ["Rust", "LLVM 18", "Flake (Nix)"],
-      progress: 60,
-      contributors: 5,
-      status: "Active Development",
-      github: "https://github.com/cyrus-lang/Cyrus",
-      lastUpdate: "In progress",
-    },
-    {
-      name: "Kavka Messenger",
-      description:
-        "Kavka Messenger combines the convenience of a centralized system with a strong commitment to security and transparency. While your data is stored on robust central servers for maximum stability and uptime, Kavka ensures that your messages remain accessible and protected at all times—giving you peace of mind that your conversations are in safe hands.",
-      tech: ["Go", "MongoDB", "Redis", "NATS", "Angular", "Docker"],
-      progress: 60,
-      contributors: 7,
-      status: "Last Stages",
-      github: "https://github.com/kavkaco/Kavka-Core",
-      lastUpdate: "6 month ago",
-    },
-    {
-      name: "Go Hexagonal Architecture",
-      description:
-        "Collection of powerful CLI tools for developers to streamline common development workflows and automate repetitive tasks.",
-      tech: ["Rust", "CLI", "Git", "Docker"],
-      progress: 40,
-      contributors: 5,
-      status: "Early Development",
-      github: "https://github.com/geekengineers/terminal-toolkit",
-      lastUpdate: "3 days ago",
-    },
-    {
-      name: "Learning Path Generator",
-      description:
-        "Personalized learning path generator that creates custom roadmaps based on developers' current skills and career goals.",
-      tech: ["Python", "FastAPI", "ML", "React"],
-      progress: 25,
-      contributors: 6,
-      status: "Planning Phase",
-      github: "https://github.com/geekengineers/learning-paths",
-      lastUpdate: "5 days ago",
-    },
-    {
-      name: "Ticket",
-      description:
-        "A practice project is designed based on distributed systems principles,and as an exercise with event driven architecture(EDA), making it approachable for anyone wanting dive into EDA world.",
-      tech: ["Golang", "NATS", "PostgreSQL", "Docker","Fiber"],
-      progress: 60,
-      contributors: 0,
-      status: "Active Development",
-      github: "https://github.com/AssassinRobot/Ticket",
-      lastUpdate: "In progress",
-    },
-    {
-      name: "Author",
-      description:
-        "Book management system,a simple practice project for learning GraphQL basics for who interested in",
-      tech: ["Golang","GraphQL","Docker","PostgreSQL"],
-      progress: 80,
-      contributors: 0,
-      status: "Almost done",
-      github: "https://github.com/AssassinRobot/author",
-      lastUpdate: "7 months ago",
-    },
-    {
-      name: "Personal Blog",
-      description:
-        "Robust bloging platform,including lots of features check out github page for more information",
-      tech: ["Golang","Gin","Docker","PostgreSQL","Redis","MinIO","JWT"],
-      progress: 70,
-      contributors: 0,
-      status: "Last Stages",
-      github: "https://github.com/personal-pulpit",
-      lastUpdate: "Last month",
-    },
-  ];
+  const ongoingProjects: OngoingProject[] = projectsData.ongoingProjects.map((p) => ({
+    title: p.name,
+    description: p.description,
+    tech: p.tech,
+    github: p.github,
+    status: p.status,
+    progress: p.progress,
+    contributors: p.contributors,
+    lastUpdate: p.lastUpdate,
+  }));
 
   return (
     <section className="pb-20 px-6">
@@ -108,18 +51,17 @@ export default function OngoingProjects() {
               <div className="flex items-start justify-between mb-4">
                 <div>
                   <h3 className="text-xl font-semibold text-white mb-2 transition-colors">
-                    {project.name}
+                    {project.title}
                   </h3>
                   <span
-                    className={`px-3 py-1 rounded-full text-xs font-medium ${
-                      project.status === "Active Development"
+                    className={`px-3 py-1 rounded-full text-xs font-medium ${project.status === "Active Development"
                         ? "bg-green-500/20 text-green-400"
                         : project.status === "Beta Testing"
                           ? "bg-blue-500/20 text-blue-400"
                           : project.status === "Early Development"
                             ? "bg-yellow-500/20 text-yellow-400"
                             : "bg-purple-500/20 text-purple-400"
-                    }`}
+                      }`}
                   >
                     {project.status}
                   </span>

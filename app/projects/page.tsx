@@ -2,42 +2,24 @@ import Navigation from "@/components/navigation";
 import Link from "next/link";
 import Footer from "@/components/footer";
 import { Button } from "@/components/ui/button";
+import projectsData from "@/content/projects.json";
+
+interface ProjectJSON {
+  title: string;
+  description: string;
+  tech: string[];
+  github: string;
+  status: string;
+}
 
 export default function Projects() {
-  const projects = [
-    {
-      name: "CodeReview Bot",
-      description:
-        "AI-powered code review automation tool that helps maintain code quality standards across repositories.",
-      tech: ["TypeScript", "Node.js", "OpenAI API", "GitHub API"],
-      github: "https://github.com/geekengineers/codereview-bot",
-      status: "Active",
-    },
-    {
-      name: "DevMetrics Dashboard",
-      description:
-        "Real-time analytics dashboard for tracking development team productivity and code quality metrics.",
-      tech: ["React", "Next.js", "PostgreSQL", "D3.js"],
-      github: "https://github.com/geekengineers/dev-metrics",
-      status: "Active",
-    },
-    {
-      name: "Terminal Toolkit",
-      description:
-        "Collection of CLI tools for developers to streamline common development workflows and tasks.",
-      tech: ["Rust", "CLI", "Git", "Docker"],
-      github: "https://github.com/geekengineers/terminal-toolkit",
-      status: "Beta",
-    },
-    {
-      name: "Learning Path Generator",
-      description:
-        "Personalized learning path generator for developers based on their current skills and career goals.",
-      tech: ["Python", "FastAPI", "Machine Learning", "React"],
-      github: "https://github.com/geekengineers/learning-paths",
-      status: "Planning",
-    },
-  ];
+  const projects: ProjectJSON[] = projectsData.projects.map((p) => ({
+    title: p.name,
+    description: p.description,
+    tech: p.tech, 
+    github: p.github,
+    status: p.status,
+  }));
 
   return (
     <div className="min-h-screen text-white">
@@ -65,16 +47,15 @@ export default function Projects() {
               >
                 <div className="flex items-start justify-between mb-4">
                   <h3 className="text-xl font-semibold text-white">
-                    {project.name}
+                    {project.title}
                   </h3>
                   <span
-                    className={`px-3 py-1 rounded-full text-xs font-medium ${
-                      project.status === "Active"
+                    className={`px-3 py-1 rounded-full text-xs font-medium ${project.status === "Active"
                         ? "bg-green-500/20 text-green-400"
                         : project.status === "Beta"
                           ? "bg-yellow-500/20 text-yellow-400"
                           : "bg-blue-500/20 text-blue-400"
-                    }`}
+                      }`}
                   >
                     {project.status}
                   </span>
