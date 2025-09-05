@@ -54,7 +54,7 @@ export default function Navigation() {
             <Link
               key={item}
               href={`/${item.toLowerCase()}`}
-              className="text-white text-lg hover:text-red-400 transition-colors"
+              className="text-white text-lg hover:text-primary transition-colors"
               onClick={() => setIsOpen(false)}
             >
               {item}

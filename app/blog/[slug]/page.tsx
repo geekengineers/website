@@ -7,14 +7,8 @@ import {
   Clock,
   User,
   ArrowLeft,
-  Share2,
-  Github,
-  Send,
 } from "lucide-react";
 import { getBlogPost, getBlogPosts } from "@/lib/blog-data";
-import ReactMarkdown from "react-markdown";
-import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { oneDark } from "react-syntax-highlighter/dist/esm/styles/prism";
 import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
 import { MDXRemote } from "next-mdx-remote/rsc";
