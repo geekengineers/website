@@ -1,0 +1,264 @@
+---
+title: "Alleviating Complexity in OOP Systems"
+excerpt: "This article explores how disciplined practices in object-oriented programming (OOP), such as favoring composition over inheritance and keeping classes small, can help manage complexity. It also introduces Data-Oriented Programming (DOP) as an alternative paradigm that fundamentally addresses complexity by separating code from data, embracing immutability, and using generic data structures. The piece explains why OOP systems can become complex and presents DOP's core principles as a complementary or alternative approach to building more robust and maintainable software."
+author: "Taha Dostifam"
+publishDate: "2025-09-05"
+readTime: "4 min"
+tags: ["OOP", "DOP", "software-design", "programming-paradigms", "typescript"]
+---
+
+# Alleviating Complexity in OOP Systems
+
+Object-oriented systems have a tendency to grow complicated over time. Too much inheritance, large classes, and tangled dependencies can make the code hard to maintain. To keep things manageable, you need to apply a few disciplined practices. Below are some classic approaches with examples in TypeScript.
+
+---
+
+### Why OOP Can Become Complex
+
+The complexity often found in object-oriented programming (OOP) systems stems not just from poor design but from fundamental aspects of the paradigm itself, as articulated by the principles of **Data-Oriented Programming (DOP)**.
+
+- **Mixing Code and Data**: In traditional OOP, code (methods) and data (members) are tightly coupled within classes. This tight coupling creates numerous relationships between entities, making the overall system harder to understand and visualize. By separating code and data, as DOP suggests, each entity has fewer independent connections, simplifying the system architecture.
+- **Mutable Objects**: Data within objects is frequently mutable, meaning it can be changed in place. This mutability makes an object's state unpredictable, which can lead to unexpected behavior and bugs, especially in multi-threaded or asynchronous environments where data can be modified at any time by different parts of the program.
+- **Data Locked in Objects**: Encapsulating data within objects forces it to conform to a rigid, class-defined shape. This rigidity complicates generic data operations like serialization to formats such as JSON, often requiring custom, boilerplate-heavy code for each data shape.
+- **Code Locked into Classes**: Functionality is often tied to specific classes as methods. This can lead to complex class hierarchies and inheritance chains when new requirements arise, as reusing code from an unrelated class is not straightforward without introducing more complex structural dependencies.
+
+While the practices below can help mitigate these issues, Data-Oriented Programming offers a different perspective by treating data as a first-class citizen to fundamentally reduce complexity.
+
+---
+
+### Disciplined Practices for OOP
+
+Here are some established practices to help manage complexity in OOP systems.
+
+#### 1\. Prefer Composition Over Inheritance
+
+**Problem:** Deep inheritance hierarchies are hard to follow and fragile.
+**Solution:** Break behavior into smaller components and assemble them instead of relying on a base class.
+
+Bad (inheritance-heavy):
+
+```typescript
+class Animal {
+  move(): void {
+    console.log("Moving...");
+  }
+}
+
+class Dog extends Animal {
+  bark(): void {
+    console.log("Woof!");
+  }
+}
+```
+
+Better (composition):
+
+```typescript
+class Mover {
+  move(): void {
+    console.log("Moving...");
+  }
+}
+
+class Dog {
+  private mover = new Mover();
+
+  bark(): void {
+    console.log("Woof!");
+  }
+
+  move(): void {
+    this.mover.move();
+  }
+}
+```
+
+Here, `Dog` uses a `Mover` rather than inheriting from `Animal`. This makes the design more flexible.
+
+---
+
+#### 2\. Keep Classes Small and Focused
+
+**Problem:** Classes tend to accumulate too many responsibilities.
+**Solution:** Apply the **Single Responsibility Principle (SRP)**. Each class should represent one concept.
+
+Bad (god class):
+
+```typescript
+class UserManager {
+  createUser() {}
+  deleteUser() {}
+  renderUserProfile() {}
+  sendEmail() {}
+}
+```
+
+Better (split responsibilities):
+
+```typescript
+class UserRepository {
+  createUser() {}
+  deleteUser() {}
+}
+
+class UserProfileRenderer {
+  renderUserProfile() {}
+}
+
+class EmailService {
+  sendEmail() {}
+}
+```
+
+Now each class has a clear, single responsibility.
+
+---
+
+#### 3\. Centralize Object Creation
+
+**Problem:** Scattering `new` across the code ties everything together too tightly.
+**Solution:** Use factories or **dependency injection** to control lifecycles.
+
+Without control:
+
+```typescript
+class EmailService {
+  sendEmail() {
+    console.log("Sent.");
+  }
+}
+
+class UserService {
+  private emailService = new EmailService();
+
+  notifyUser() {
+    this.emailService.sendEmail();
+  }
+}
+```
+
+With dependency injection:
+
+```typescript
+class EmailService {
+  sendEmail() {
+    console.log("Sent.");
+  }
+}
+
+class UserService {
+  constructor(private emailService: EmailService) {}
+
+  notifyUser() {
+    this.emailService.sendEmail();
+  }
+}
+
+// Object creation happens in one place
+const emailService = new EmailService();
+const userService = new UserService(emailService);
+```
+
+---
+
+#### 4\. Reduce Hidden Coupling
+
+**Problem:** Classes know too much about each other and call deep chains of methods.
+**Solution:** Respect the **Law of Demeter** ("don’t talk to strangers").
+
+Bad:
+
+```typescript
+user.getProfile().getAddress().getCity();
+```
+
+Better:
+
+```typescript
+interface Profile {
+  getCity(): string;
+}
+
+class User {
+  constructor(private profile: Profile) {}
+
+  getCity(): string {
+    return this.profile.getCity();
+  }
+}
+
+const city = user.getCity();
+```
+
+The `User` class exposes only what’s necessary, reducing coupling.
+
+---
+
+#### 5\. Use Modules to Enforce Boundaries
+
+**Problem:** Everything depends on everything else.
+**Solution:** Group related classes into modules and expose only what is needed.
+
+```typescript
+// user/index.ts
+export { UserRepository } from "./UserRepository";
+export { UserProfileRenderer } from "./UserProfileRenderer";
+```
+
+Consumers only import the public API, not internal helpers.
+
+---
+
+#### 6\. Manage State Explicitly
+
+**Problem:** Mutable state scattered across objects causes bugs.
+**Solution:** Use **immutability** when possible, or encapsulate state changes.
+
+```typescript
+class Cart {
+  items: string[] = [];
+}
+
+const cart = new Cart();
+cart.items.push("apple"); // anyone can mutate freely
+```
+
+Better:
+
+```typescript
+class Cart {
+  private items: string[] = [];
+
+  addItem(item: string): void {
+    this.items.push(item);
+  }
+
+  getItems(): ReadonlyArray<string> {
+    return this.items;
+  }
+}
+
+const cart = new Cart();
+cart.addItem("apple");
+```
+
+The state is now controlled and predictable.
+
+---
+
+### Data-Oriented Programming: A Different Perspective
+
+**Data-Oriented Programming (DOP)** offers an alternative paradigm to fundamentally reduce software complexity, particularly for information-rich applications. Its principles are language-agnostic and can be applied in various programming languages, including multi-paradigm languages like TypeScript.
+
+- **Principle 1: Separate Code from Data.** Functions should operate on data passed to them, rather than relying on an object's internal state. This promotes **code reusability** and makes testing simpler because code can be tested in isolation by passing data independently to functions. In an OOP context, this means aggregating code in static methods and data in classes that serve purely as data containers.
+- **Principle 2: Represent Data with Generic Data Structures.** DOP advocates for using generic data structures like maps (objects) and arrays rather than custom classes. This results in a **flexible data model** that allows for fields to be dynamically added, removed, or renamed at runtime. It also enables the use of a rich ecosystem of generic functions (e.g., `JSON.stringify`).
+- **Principle 3: Data is Immutable.** Any change to data results in creating a new version of the data, leaving the original intact. This provides **predictable code behavior** and inherent **concurrency safety**, as data cannot be unexpectedly modified by other parts of the system.
+- **Principle 4: Separate Data Schema from Data Representation.** The expected shape and validation rules for data are defined in a separate schema (e.g., JSON Schema). This allows for **selective validation** and the definition of complex conditions beyond static types. It also simplifies the management of optional fields and can be used to automatically generate documentation and unit tests.
+
+These principles together aim to build systems that are inherently simpler, more flexible, scalable, and maintainable.
+
+---
+
+### Conclusion
+
+To reduce complexity in OOP systems, you can apply disciplined practices like favoring composition over inheritance, keeping classes small, and centralizing object creation. However, understanding the core reasons behind complexity, as highlighted by Data-Oriented Programming's principles, provides a broader perspective. By treating data as a first-class citizen, DOP offers a powerful alternative for designing systems that are inherently simpler and more robust.
