@@ -45,6 +45,35 @@ export default function Books() {
         "Zero To Production is the ideal starting point for your journey as a Rust backend developer. You will learn by doing: you will build a fully functional email newsletter API, starting from scratch.",
       thumbnail: "https://m.media-amazon.com/images/I/51UnrF7OupL._SY385_.jpg",
     },
+    {
+      url: "https://www.manning.com/books/grokking-algorithms",
+      title: "Grokking Algorithms: An Illustrated Guide for Programmers and Other Curious People",
+      description:
+        "Grokking Algorithms is a fully illustrated, friendly guide that teaches you how to apply common algorithms to the practical problems you face every day as a programmer. You'll start with sorting and searching and, as you build up your skills in thinking algorithmically, you'll tackle more complex concerns such as data compression and artificial intelligence. Each carefully presented example includes helpful diagrams and fully annotated code samples in Python.",
+      thumbnail: "https://www.oreilly.com/covers/urn:orm:book:9781617292231/400w/",
+    },
+    {
+      url: "https://www.oreilly.com/library/view/concurrency-in-go/9781491941294/",
+      title: "Concurrency in Go",
+      description:
+        "Concurrency can be notoriously difficult to get right, but fortunately, the Go open source programming language makes working with concurrency tractable and even easy. If you’re a developer familiar with Go, this practical book demonstrates best practices and patterns to help you incorporate concurrency into your systems.",
+      thumbnail: "https://www.oreilly.com/covers/urn:orm:book:9781491941294/400w/",
+    },
+        {
+      url: "https://nostarch.com/math-programming",
+      title: "Math for Programming",
+      description:
+        "Every great programming challenge has mathematical principles at its heart. Whether you’re optimizing search algorithms, building physics engines for games, or training neural networks, success depends on your grasp of core mathematical concepts.",
+      thumbnail: "https://m.media-amazon.com/images/I/71EMZ0rlAPL._SL1500_.jpg",
+    },
+        {
+      url: "https://nostarch.com/blackhatgo",
+      title: "Black Hat Go",
+      description:
+        "Like the best-selling Black Hat Python, Black Hat Go explores the darker side of the popular Go programming language. This collection of short scripts will help you test your systems, build and automate tools to fit your needs, and improve your offensive security skillset.",
+      thumbnail: "https://m.media-amazon.com/images/I/81k+Ajmu4fL._SY385_.jpg",
+    },
+
   ];
 
   return (
