@@ -1,0 +1,38 @@
+[
+  {
+    "url": "https://www.google.se/books/edition/Data_Oriented_Programming/wJB8EAAAQBAJ?hl=en&gbpv=0#",
+    "title": "Data Oriented Programming",
+    "description": "Eliminate the unavoidable complexity of object-oriented designs. The innovative data-oriented programming paradigm makes your systems less complex by making it simpler to access and manipulate data.",
+    "thumbnail": "https://images.manning.com/360/480/resize/book/0/76cfc61-95fd-4c0d-b221-0e5c3ca90583/Sharvit-DOP-HI.png"
+  },
+  {
+    "url": "https://www.amazon.se/-/en/Nora-Sandler/dp/1718500424",
+    "title": "Writing a C Compiler: Build a Real Programming Language from Scratch",
+    "description": "Compilers are at the heart of everything programmers do, yet even experienced developers find them intimidating. For those eager to truly grasp how compilers work, Writing a C Compiler dispels the mystery. This book guides you through a fun and engaging project where you’ll learn what it takes to compile a real-world programming language to actual assembly code.",
+    "thumbnail": "https://m.media-amazon.com/images/I/81U4q6BPrXL._SL1500_.jpg"
+  },
+  {
+    "url": "https://www.amazon.se/-/en/Nic-Jackson/dp/1786468662",
+    "title": "Building Microservices with Go: Develop seamless, efficient, and robust microservices with Go",
+    "description": "Microservice architecture is sweeping the world as the de facto pattern to build web-based applications. Golang is a language particularly well suited to building them. Its strong community, encouragement of idiomatic style, and statically-linked binary artifacts make integrating it with other technologies and managing microservices at scale consistent and intuitive. This book will teach you the common patterns and practices, showing you how to apply these using the Go programming language.",
+    "thumbnail": "https://m.media-amazon.com/images/I/71p7JVjaMCL._SY385_.jpg"
+  },
+  {
+    "url": "https://www.amazon.se/-/en/Thomas-Mailund/dp/1484269268",
+    "title": "Pointers in C Programming: A Modern Approach to Memory Management, Recursive Data Structures, Strings, and Arrays",
+    "description": "Gain a better understanding of pointers, from the basics of how pointers function at the machine level, to using them for a variety of common and advanced scenarios. This short contemporary guide book on pointers in C programming provides a resource for professionals and advanced students needing in-depth hands-on coverage of pointer basics and advanced features. It includes the latest versions of the C language, C20, C17, and C14.",
+    "thumbnail": "https://m.media-amazon.com/images/I/41FD3yB-pdS._SY445_SX342_.jpg"
+  },
+  {
+    "url": "https://www.oreilly.com/library/view/hands-on-dependency-injection/9781789132762/",
+    "title": "Hands-On Dependency Injection in Go",
+    "description": "Of the six methods introduced in this book, some are conventional, such as constructor or method injection, and some unconventional, such as just-in-time or config injection. Each method is explained in detail, focusing on their strengths and weaknesses, and is followed with a step-by-step example of how to apply it. With plenty of examples, you will learn how to leverage DI to transform code into something simple and flexible. You will also discover how to generate and leverage the dependency graph to spot and eliminate issues. Throughout the book, you will learn to leverage DI in combination with test stubs and mocks to test otherwise tricky or impossible scenarios.",
+    "thumbnail": "https://www.oreilly.com/covers/urn:orm:book:9781789132762/400w"
+  },
+  {
+    "url": "https://www.oreilly.com/library/view/hands-on-dependency-injection/9781789132762/",
+    "title": "Zero To Production In Rust: An introduction to backend development",
+    "description": "Zero To Production is the ideal starting point for your journey as a Rust backend developer. You will learn by doing: you will build a fully functional email newsletter API, starting from scratch.",
+    "thumbnail": "https://m.media-amazon.com/images/I/51UnrF7OupL._SY385_.jpg"
+  }
+]
